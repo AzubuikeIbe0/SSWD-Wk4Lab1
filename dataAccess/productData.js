@@ -29,6 +29,30 @@ async function getProducts() {
     return products;
 }
 
+// Get product by id from DB
+//
+async function getProductById(id) {
+
+    // Define variable
+    let product;
+
+    try {
+        // use where with findUnique
+        product = await prisma.product.findUnique ({
+            where: {id: Number(id)}
+        });
+
+    // Catch and log errors to server side console 
+    } catch (err) {
+        console.log('DB Error - get all products: ', err.message);
+    } finally {
+      // TODO document why this block is empty
+
+    }
+    // return a single product if found
+    return product;
+}
+
 
 // Export 
 module.exports = {
