@@ -4,7 +4,7 @@
 const router = require('express').Router();
 
 // Import category service 
-const categorieservice = require("../services/categoryService.js");
+const categoryService = require("../services/categoryService.js");
 
 // This endpoint will return all category data from the database
 router.get('/', async(req, res) => {

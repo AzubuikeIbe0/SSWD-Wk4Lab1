@@ -8,7 +8,7 @@ const categoryData = require('../dataAccess/categoryData');
 async function getCategories() {
     
     // a place holder for now 
-    const categories = await productData.getCategories();
+    const categories = await categoryData.getCategories();
   
     // return Categories
     return categories;
